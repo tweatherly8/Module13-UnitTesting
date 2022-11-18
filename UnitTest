@@ -1,0 +1,40 @@
+import unittest
+
+class TestProj3(unittest.TestCase):
+
+    def test_symbol(self):
+        symbol = ('SYMBOL')
+
+        self.assertEqual(symbol.capitalize(), (7,7), 'Correct symbol size')
+
+    def test_chartType(self):
+        chart_1 = ('1', '1. Bar', 1)
+        chart_2 = ('2', '2. Line', 2)
+
+        self.assertEqual(chart_1.count, 1)
+        self.assertEqual(chart_2.count, 2)
+    
+    def test_timeSeries(self):
+        timeS_1 = ('1', '1. Intraday', 1)
+        timeS_2 = ('2', '2. Daily', 2)
+        timeS_3 = ('3', '3. Weekly', 3)
+        timeS_4 = ('4', '4. Monthly', 4)
+
+        self.assertEqual(timeS_1.count, 1)
+        self.assertEqual(timeS_2.count, 2)
+        self.assertEqual(timeS_3.count, 3)
+        self.assertEqual(timeS_4.count, 4)
+       
+
+    def test_startDate(self):
+        date_format = ('%Y-%m-%d')
+
+        self.assertEqual(date_format)
+
+    def test_endDate(self):
+        date_format = ('%Y-%m-%d')
+
+        self.assertGreater(date_format)
+    
+if __name__ == "__main__":
+    unittest.main()
